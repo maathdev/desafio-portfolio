@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --bg: hsl(245, 14%, 15%);
+    --bg-secundary: hsl(244, 13%, 21%);
+    --main-color: hsl(249, 15%, 56%);
+    --tag-bg: hsl(327, 35%, 68%);
+    --gray: hsl(249, 15%, 56%);
+}
+
+::selection {
+    background-color: var(--bg);
+    color: white;
+}
+
+html, body {
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+
+    background: var(--bg);
+}
+
+.container {
+    margin: 4rem 4rem 3rem;
+    padding: 3.2rem 4rem 3.2rem;
+}
+
+.card {
+    color: var(--main-color);
+
+    background: var(--bg-secundary);
+    border-radius: 2rem;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+
+    margin-bottom: 2rem;
+}
+
+a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #8D65C5;
+}
+
+/* Scrollbar */
+
+body::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--bg-secundary);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--gray);
+    border-radius: 20px;
+    border: 4px solid var(--bg-secundary);
+  }
+
+/* App */
+
+#app {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+}
+
+
+/* Header - Profile */
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    margin-bottom: 3rem;
+}
+
+.profile h3 {
+    font-size: 2.3rem;
+    font-weight: bold;
+
+    margin-bottom: 1rem;
+}
+
+.profile p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+/* Info */
+
+.info ul li {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    list-style: none;
+
+    margin-bottom: 2rem;
+}
+
+.info ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Tecnology */
+
+.tecnologys span {
+    background: #8D65C5;
+    
+    text-align: center;
+    color: var(--bg);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    border-radius: 3rem;
+
+    padding: .6rem;
+}
+
+.tecnologys {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Experience */
+
+.experience ul, .education ul {
+    margin-left: 2rem;
+}
+
+.experience ul li, .education ul li {
+    margin-bottom: 2rem;
+}
+
+.experience ul li:last-child, .education ul li:last-child {
+    margin-bottom: 0;
+}
+
+.experience ul li h3, .education ul li h3 {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.experience ul li p, .education ul li p {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.experience ul li span, .education ul li span {
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+/* Main */
+
+main .container {
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title .card-title {
+    margin-bottom: 0;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.project-item h3 {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    margin-bottom: 2rem;
+
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.project-item p {
+    font-size: 1.4rem;
+    margin-bottom: 3.2rem;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.group section {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+
+    font-size: 1.4rem;
+}
+
+.group section.type h6 {
+    width: 1.5rem;
+    height: 1.5rem;
+    
+    background-color: #E7DE79;
+    border-radius: 50%;
+    border: 2px solid var(--gray);
+}
+
+/* Post */
+
+.post {
+    display: grid;
+    align-items: center;
+    grid-template-columns: max-content 1fr;
+    gap: 2rem;
+}
+
+.post img {
+    width: 100%;
+}
+
+.post section.post-info ul li {
+    list-style: none;
+}
+
+.post section.post-info h2 {
+    margin-bottom: 1.4rem;
+    font-size: 1.8rem;
+}
+
+.post section.post-info p {
+    margin-bottom: 2.8rem;
+    font-size: 1.4rem;
+}
+
+.post section.post-info h3 {
+    margin-bottom: 1.4rem;
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+.post section.post-info ul {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+
+    padding: 2rem 0;
+
+    text-align: center;
+    color: var(--main-color);
+
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+footer::selection {
+    background: var(--bg-secundary);
+}
+
+footer a {
+    color: #8D65C5;
+}
